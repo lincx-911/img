@@ -71,7 +71,7 @@ def compress(choose, des_dir, src_dir, file_list):
 def compress_photo():
     '''调用压缩图片的函数
     '''
-    src_dir, des_dir = "photos/", "min_photos/"
+    src_dir, des_dir = "E:\\blog\\hexo\\img\\photos\\", "E:\\blog\\hexo\\img\\mini_photos\\"
     
     if directory_exists(src_dir):
         if not directory_exists(src_dir):
@@ -97,7 +97,7 @@ def handle_photo():
     -----------
     最后将data.json文件存到博客的source/photos文件夹下
     '''
-    src_dir, des_dir = "photos/", "min_photos/"
+    src_dir, des_dir = "E:\\blog\\hexo\\img\\photos\\", "E:\\blog\\hexo\\img\\mini_photos\\"
     file_list = list_img_file(src_dir)
     list_info = []
     file_list.sort(key=lambda x: x.split('_')[0])   # 按照日期排序
@@ -132,7 +132,7 @@ def handle_photo():
     list_info.reverse()  # 翻转
     final_dict = {"list": list_info}
     # 这里可以直接修改到你的hexo资源目录
-    with open("D:/myworkspace/1GitHub_cungudafa/MyWeb/source/photos/data.json","w") as fp:
+    with open("E:\\blog\\hexo\\love\\source\\photos\\data.json","w") as fp:
         json.dump(final_dict, fp)
 
 def cut_photo():
